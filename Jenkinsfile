@@ -17,7 +17,7 @@ pipeline {
             steps {
 
                     sh 'echo This is deploy'
-                    error 'pipeline failed'
+                    //error 'pipeline failed'
 
             }
         }
@@ -26,6 +26,7 @@ pipeline {
     post {
         always{
             echo "This sections runs always"
+            deleteDir()
         }
         success{
             echo "This section run when pipeline success"
